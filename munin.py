@@ -113,7 +113,7 @@ def fetch_upstream_power(channels):
 
 
 def main():
-    conn = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True)
+    conn = sqlite3.connect(f"file:{DB_PATH}?immutable=1", uri=True)
     conn.row_factory = sqlite3.Row
 
     ts = get_latest_timestamp(conn)
