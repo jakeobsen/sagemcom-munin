@@ -1,0 +1,7 @@
+.venv/
+*.png
+*.db*
+config.py
+__pycache__/
+modem_logger.log
+.python-version

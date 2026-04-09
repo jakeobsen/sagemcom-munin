@@ -1,0 +1,10 @@
+[Unit]
+Description=Modem vendor log fetcher
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/modem-logger
+ExecStart=/opt/modem-logger/.venv/bin/python3 /opt/modem-logger/modem_logfile.py
+Restart=no

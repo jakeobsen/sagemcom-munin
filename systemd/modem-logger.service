@@ -1,0 +1,11 @@
+[Unit]
+Description=Modem DOCSIS stats logger
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/modem-logger
+ExecStart=/opt/modem-logger/.venv/bin/python3 /opt/modem-logger/modem_logger.py
+# Reduce log noise on transient failures (modem reboots, etc.)
+Restart=no
