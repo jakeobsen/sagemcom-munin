@@ -47,6 +47,7 @@ def config_downstream_power(channels):
     print("multigraph modem_downstream_power")
     print("graph_title DOCSIS Downstream Power")
     print("graph_vlabel dBmV")
+    print("graph_args --units-exponent 0")
     print("graph_category network")
     print("graph_info Downstream channel power levels. Ideal range is -7 to +7 dBmV.")
     for ch in channels:
@@ -62,6 +63,7 @@ def config_downstream_snr(channels):
     print("multigraph modem_downstream_snr")
     print("graph_title DOCSIS Downstream SNR")
     print("graph_vlabel dB")
+    print("graph_args --units-exponent 0")
     print("graph_category network")
     print("graph_info Downstream channel signal-to-noise ratio. Should be above 33 dB.")
     for ch in channels:
@@ -77,6 +79,7 @@ def config_upstream_power(channels):
     print("multigraph modem_upstream_power")
     print("graph_title DOCSIS Upstream Power")
     print("graph_vlabel dBmV")
+    print("graph_args --units-exponent 0")
     print("graph_category network")
     print("graph_info Upstream channel power levels. Ideal range is 35 to 49 dBmV.")
     for ch in channels:
