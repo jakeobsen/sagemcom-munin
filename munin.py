@@ -50,6 +50,7 @@ def config_downstream_power(channels):
     print("graph_args --units-exponent 0")
     print("graph_category network")
     print("graph_info Downstream channel power levels. Ideal range is -7 to +7 dBmV.")
+    print("graph_printf %6.2lf")
     for ch in channels:
         cid = ch["channel_id"]
         freq_mhz = ch["frequency_hz"] / 1_000_000 if ch["frequency_hz"] else "?"
@@ -66,6 +67,7 @@ def config_downstream_snr(channels):
     print("graph_args --units-exponent 0")
     print("graph_category network")
     print("graph_info Downstream channel signal-to-noise ratio. Should be above 33 dB.")
+    print("graph_printf %6.2lf")
     for ch in channels:
         cid = ch["channel_id"]
         freq_mhz = ch["frequency_hz"] / 1_000_000 if ch["frequency_hz"] else "?"
@@ -82,6 +84,7 @@ def config_upstream_power(channels):
     print("graph_args --units-exponent 0")
     print("graph_category network")
     print("graph_info Upstream channel power levels. Ideal range is 35 to 49 dBmV.")
+    print("graph_printf %6.2lf")
     for ch in channels:
         cid = ch["channel_id"]
         freq_mhz = ch["frequency_hz"] / 1_000_000 if ch["frequency_hz"] else "?"
