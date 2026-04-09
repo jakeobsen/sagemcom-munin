@@ -36,7 +36,7 @@ def parse_downstream_channels(data: list[dict]) -> list[dict]:
                 "channel_id": ch.get("uid") or ch.get("channel_id"),
                 "frequency_hz": ch.get("frequency"),
                 "power_dbmv": ch.get("power_level"),
-                "snr_db": ch.get("snr_level") or ch.get("snr"),
+                "snr_db": ch.get("SNR"),
                 "modulation": ch.get("modulation"),
                 "locked": 1 if ch.get("lock_status") or ch.get("locked") else 0,
                 "channel_type": ch.get("channel_type"),
